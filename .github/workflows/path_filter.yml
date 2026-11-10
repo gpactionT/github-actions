@@ -2,7 +2,7 @@ name: path-filter
 on:
   push: # 푸쉬할떄 액션 실행
     paths: # part1폴더 내 파일들이 변경될떄 액션 실행
-    - '.github/workflows/part1/*'
+    - '.github/workflows/part1_push/*'
 jobs:
   path-filter:
     runs-on: ubuntu-latest
