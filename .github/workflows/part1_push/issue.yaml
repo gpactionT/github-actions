@@ -1,3 +1,4 @@
+# 이슈에 의한 트리거는 디폴트 브랜치에서만 발생
 name: issue-workflow
 on:
   issues:
