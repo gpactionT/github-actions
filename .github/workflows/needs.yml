@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [job1] # 이럴경우 job1이 성공한 이후 job2 실행
     steps:
-    - name: 
-      run: echo "job1 done"
+    - name: echo
+      run: echo "job2 done"
   job3:
     runs-on: ubuntu-latest
     steps:
@@ -27,4 +27,5 @@ jobs:
     needs: [job3]
     steps:
     - name: echo
+      run: echo "job4 done"
 
