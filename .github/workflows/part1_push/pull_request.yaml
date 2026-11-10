@@ -1,6 +1,6 @@
 # 풀리퀘스트 발생 시 pull-request-job이라는 잡이 실행되고 첫번쨰스텝으로 echo 헬로월드 출력
 
-name: pull-request-workflow # 액션창에서 표현될 시각화 이름
+name: pull-request-workflow 1 # 액션창에서 표현될 시각화 이름
 on: 
   pull_request:  # 풀리퀘스트 이벤트 발생시 트리거하겠다.
     types: [opened] # 풀리퀘스트가 오픈될때만.
