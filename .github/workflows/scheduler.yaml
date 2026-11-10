@@ -1,7 +1,7 @@
 name: schduler-workflow
 on:
   schedule:
-  - cron: '25 * * * *' # 매시간 25분마다 실행해
+  - cron: '*/5 * * * *'
     timezone: 'Asia/Seoul'
   
   workflow_dispatch:
