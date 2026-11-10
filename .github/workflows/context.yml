@@ -1,3 +1,4 @@
+# github 콘텍스트 확인하기
 name: context
 on: workflow_dispatch
 
@@ -7,3 +8,7 @@ jobs:
     steps:
     - name: github context
       run: echo '${{toJSON(github)}}'
+    - name: check github context
+      run: |
+        echo ${{ github.repository }}
+        echo ${{ github['event_name'] }}
