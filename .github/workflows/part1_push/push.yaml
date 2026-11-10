@@ -1,6 +1,6 @@
 # 푸시발생 시 pushjob이라는 잡이 실행되고 첫번쨰스텝으로 echo 헬로월드 출력
 
-name: push-workflow1 # 액션창에서 표현될 시각화 이름
+name: push-workflow 2 # 액션창에서 표현될 시각화 이름
 on: push # 푸쉬이벤트 발생시 트리거하겠다.
 
 jobs:
