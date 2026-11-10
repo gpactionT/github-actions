@@ -1,0 +1,28 @@
+name: workflow_dispatch_y
+on:
+  workflow_dispatch: # 수동으로 워크플로우할수있는 workflow_dispatch를 하겠다
+    inputs: # 입력값 설정
+      name: # 입력값 이름
+        description: 'set name' # 입력값 설명
+        required: true # 필수 입력값. true이면 꼭 입력해야함
+        default: 'HGD' # 기본값
+        type: string
+      environment:
+        description: 'set env' # 입력값 설명
+        required: true # 필수 입력값. true이면 꼭 입력해야함
+        default: 'dev' # 기본값
+        type: choice
+        options: # 선택값 리스트
+          - dev
+          - prod
+          - qa
+jobs:
+  workflow_dispatch_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo hello world
+    - name: echo inputs
+      run: | 
+        echo ${{ github.inputs.name }}
+        echo ${{ github.inputs.environment }}
