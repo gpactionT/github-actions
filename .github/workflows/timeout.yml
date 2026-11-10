@@ -1,0 +1,19 @@
+name: timeout
+on: push: # 푸쉬할떄 액션 실행
+
+jobs:
+  timeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2 # 2분안에 종료해라!
+    steps:
+    - name: loop # 1초에 1씩 카운팅되는 무한루프
+      run: |
+        count=0
+        while true; do
+          echo "seconds: $count"
+          count=$((count+1))
+          sleep 1
+        done
+    - name: echo
+      run: echo hello!
+# 결과는 2분동안 1스텝만 하다가 끝남. echo gello!는 안나옴
