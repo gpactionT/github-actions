@@ -1,8 +1,10 @@
 name: path-filter
 on:
   push: # 푸쉬할떄 액션 실행
-    paths: # part1폴더 내 파일들이 변경될떄 액션 실행
+    paths: # part1폴더 내 파일들이 변경될떄 액션 실행. push.yaml 파일은 제외
     - '.github/workflows/part1_push/*'
+    - '!.github/workflows/part1_push/push.yaml'
+
 jobs:
   path-filter:
     runs-on: ubuntu-latest
