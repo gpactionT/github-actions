@@ -1,5 +1,6 @@
 # needs:job은 기본적으로 병렬실행인데 잡들간 의존성이 필요할 경우 needs를 사용
 # 잡1,3은 병렬되고 잡1이 성공하면 잡2실행되고 잡4는 잡3이 실패할테니 안됨
+
 name: needs
 on: push
 
@@ -24,7 +25,7 @@ jobs:
         exit 1
   job4:
     runs-on: ubuntu-latest
-    needs: [job3]
+    needs: [job3] # 잡3이 성공해야 잡4 실행가능
     steps:
     - name: echo
       run: echo "job4 done"
