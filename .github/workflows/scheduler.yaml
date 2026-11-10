@@ -1,0 +1,11 @@
+name: schduler-workflow
+on:
+  schedule:
+  - cron: '25 * * * *' # 매시간 25분마다 실행해
+
+jobs:
+  scheduler-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: schduler test
+      run: echo hello world!
