@@ -1,0 +1,17 @@
+# needs:job은 기본적으로 병렬실행인데 잡들간 의존성이 필요할 경우 needs를 사용
+
+name: needs
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo
+      run: echo "job1 done"
+  job2:
+    runs-on: ubuntu-latest
+    needs: [job1] # 이럴경우 job1이 성공한 이후 job2 실행
+    steps:
+    - name: 
+      run: echo "job1 done"

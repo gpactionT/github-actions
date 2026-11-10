@@ -1,14 +1,14 @@
-name: schduler-workflow
+name: schedule-test
+
 on:
   schedule:
-  - cron: '*/5 * * * *'
-    timezone: 'Asia/Seoul'
-  
+    - cron: '17,32,47 * * * *'
   workflow_dispatch:
 
 jobs:
-  scheduler-job:
+  test:
     runs-on: ubuntu-latest
     steps:
-    - name: schduler test
-      run: echo hello world!
+      - name: Test schedule
+        run: echo "Schedule is working!"
+      
