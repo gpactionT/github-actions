@@ -1,5 +1,5 @@
 name: timeout
-on: push: # 푸쉬할떄 액션 실행
+on: push # 푸쉬할떄 액션 실행
 
 jobs:
   timeout:
