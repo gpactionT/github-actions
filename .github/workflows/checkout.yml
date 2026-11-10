@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: use checkout action
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4 # 깃허브저장소 내 checkout 레포지토리 사용. 버전은 v4
     - name: check file list
       run: cat README.md
