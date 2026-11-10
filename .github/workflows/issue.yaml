@@ -1,0 +1,15 @@
+name: issue-workflow
+on:
+  issues:
+    types: [opened] # 이슈가 생성될떄만 트리거 발동하겠다
+
+jobs:
+  issue-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo hello world 
+    - name: step2
+      run: |
+        echo hello world 2
+        echo github actions!
