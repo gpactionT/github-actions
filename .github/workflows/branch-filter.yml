@@ -1,0 +1,11 @@
+name: branch-filter
+on:
+  push: # 푸쉬할떄 액션 실행
+    branches: ["dev"] # dev 브랜치에서만 푸쉬 시 액션 실행
+
+jobs:
+  branch-filter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo
+      run: echo hello
