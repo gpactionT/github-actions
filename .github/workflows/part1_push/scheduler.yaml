@@ -1,12 +1,13 @@
+# 매 10,27,59분에 자동스케쥴러 실행하는 액션
 name: schedule-test
 
 on:
   schedule:
-    - cron: '10,27,59 * * * *'
+    - cron: '10,27,59 * * * *' 
   workflow_dispatch:
 
 jobs:
-  test:
+  schduleer_test:
     runs-on: ubuntu-latest
     steps:
       - name: Test schedule
