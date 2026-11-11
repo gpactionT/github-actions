@@ -14,6 +14,8 @@ jobs:
           count=$((count+1))
           sleep 1
         done
+      timeout-minutes: 1
     - name: echo
       run: echo hello!
-# 결과는 2분동안 1스텝만 하다가 끝남. echo gello!는 안나옴
+# 2분안에 잡이 못끝내면 종료
+# 1스텝인 loop이 1분안에 못끝내서 에코스텝은 시작도 못하고 끝.
