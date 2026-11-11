@@ -1,0 +1,4 @@
+# output : 밸류 전달. 딕셔너리타입임. "{key}={value}" >> $github_output
+# 다른 job에 밸류도 전달가능
+
+name: output

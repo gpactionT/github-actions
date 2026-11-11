@@ -1,0 +1,16 @@
+# stratsWith, endsWith, contains
+# 시작어, 끝나는어, 포함여부
+
+name: string-function
+on: push
+
+jobs:
+  string-function:
+    runs-on: ubuntu-latest
+    steps:
+    - name: startswith
+      if: stratsWith('github actions','git')
+      run: echo "git"  # 포함되기에 액션발동하여 git 출력
+    - name: startswith
+      if: startsWith('github actions', 'test')
+      run: echo "test" # false이기에 본 스텝은 스킵됨

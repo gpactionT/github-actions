@@ -11,7 +11,7 @@ jobs:
     - name: echo
       run: echo hello-world > hello.txt # hello.txt 파일에 hello-world가 들어가도록
     - name: upload artifact
-      uses: actions/upload-artifact@v3 # 업로드아티팩 버전3 가져와
+      uses: actions/upload-artifact@v4 # 업로드아티팩 버전3 가져와
       with: # 인풋값 설정
         name: artifact-test
         path: ./hello.txt # hello.txㅅ 파일을 artifact에 넣어라!
@@ -21,7 +21,7 @@ jobs:
     needs: [upload-artifact_j] # 1번 잡이 완료되고 실행되도록 의존성 추가
     steps:
     - name: download artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: artifact-test
         path: ./ # 현재 경로에 파일을 다운로드해

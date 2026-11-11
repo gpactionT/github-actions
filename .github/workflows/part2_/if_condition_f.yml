@@ -1,0 +1,20 @@
+name: if-2
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: exit 1
+      run: exit 1
+    - name: echo     
+      if: always() # stp1이 실패했기에 echo도 건너뛰어야하는데 always로 강제실행시킴
+      run: echo hello
+
+  job2:
+    needs: [job1]  
+    runs-on: ubuntu-latest
+    if: always()   # # job1이 실패했기에 job2도 실패해야하지만 always했기에 가능
+    steps:
+    - name: echo
+      run: echo hello

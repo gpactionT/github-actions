@@ -1,0 +1,17 @@
+# 변수 조합을 통해 실행 자동
+
+name: matric
+on: push
+
+jobs:
+  get-matrix:
+    strategy: # matrix 정의 문법
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        version: [12,14] # 총 4번 발생. 자기가 조합을 해서 다 실행시킴
+      runs-on: ${{matrix.os}}
+      steps:
+      - name: check matrix
+        run:
+          echo ${{ matrix.os }}
+          echo ${{ matrix.version }}
